@@ -1,5 +1,6 @@
 import argparse
-from src.scrape_business_data import scrape_business_data
+from export_to_excel import export_to_excel
+from scrape_businesses import scrape_businesses
 
 
 def main():
@@ -19,8 +20,8 @@ def main():
     parser.add_argument(
         "-o",
         type=str,
-        default="output.csv",
-        help="CSV output file",
+        default="output.xlsx",
+        help="xlsx output file",
     )
     parser.add_argument(
         "--headless",
@@ -30,7 +31,12 @@ def main():
 
     args = parser.parse_args()
 
-    results = scrape_business_data(args.q, args.max, args.headless)
+    results, error = scrape_businesses(args.q, args.max, args.headless)
+
+    if error:
+        print(f"Error: {error}")
+    else:
+        export_to_excel(results, args.o)
 
 
 if __name__ == "__main__":
