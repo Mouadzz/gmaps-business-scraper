@@ -4,7 +4,12 @@ A free and easy-to-use tool to scrape business information from Google Maps base
 
 ## How to Run
 
-Run the scraper from the command line with:
+First install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+Then run the scraper from the command line with:
 
 ```bash
 python main.py -q "coffee shops New York" -max 20 -o results.xlsx --headless
@@ -24,4 +29,3 @@ Output filename in Excel `.xlsx` format.
 
 **`--headless` (optional)**  
 Run the browser in headless mode (without UI).
-
