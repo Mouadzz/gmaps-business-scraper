@@ -24,3 +24,4 @@ Output filename in Excel `.xlsx` format.
 
 **`--headless` (optional)**  
 Run the browser in headless mode (without UI).
+
