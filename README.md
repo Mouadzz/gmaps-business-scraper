@@ -8,7 +8,7 @@ Fetch details like business name, address, phone number, website, and more.
 Run the scraper from the command line with:
 
 ```bash
-python scraper.py -q "coffee shops New York" -max 20 -o results.xlsx --headless
+python main.py -q "coffee shops New York" -max 20 -o results.xlsx --headless
 ```
 
 - `-q` (required)  
